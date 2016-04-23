@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MOVIE APP</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="go_top">Slide to top</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_pop">Popular</string>
+    <string name="action_high">High Rated Movie</string>
+    <string name="action_fav">Favorite</string>
+    <string name="detail_trailer">Trailer</string>
+    <string name="detail_reviews">Reviews</string>
+    <string name="detail_overview">Overview</string>
+    <string name="no_conn">No connection</string>
+    <string name="see_more">See more</string>
+    <string name="no_trail">No trailer found</string>
+    <string name="no_revs">No review found</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="choose_mov">Please Select Movie</string>
+</resources>
