@@ -1,5 +1,6 @@
 package com.example.engab.movie_app.fragment;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.database.Cursor;
@@ -72,7 +73,7 @@ public class MoviesFragment extends Fragment {
     public static final String SORT_SATE = "state";
     private static final String SORT = "sort_data";
 
-    public static MenuItem up, pop, high, fav;
+    public static MenuItem up, pop, high, fav , unfav;
     public static RecyclerView gridView;
     public static CoreAdapter adapter;
 
@@ -173,7 +174,12 @@ public class MoviesFragment extends Fragment {
                     movies.clear();
                     SharedPreferences prefs = getActivity().getSharedPreferences(SORT, 0);
                     String state = prefs.getString(SORT_SATE, "No pop!");
-                    if (state.equals("popChecked")) {
+                    if (state == null)
+                    {
+                        fullTask("popularity.desc");
+                        adapter.notifyDataSetChanged();
+                    }
+                  else if (state.equals("popChecked")) {
                         fullTask("popularity.desc");
                         adapter.notifyDataSetChanged();
                     } else if (state.equals("highChecked")) {

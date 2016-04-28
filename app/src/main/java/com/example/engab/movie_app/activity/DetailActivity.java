@@ -73,7 +73,6 @@ public class DetailActivity extends AppCompatActivity {
                     }
                 });
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -88,6 +87,8 @@ public class DetailActivity extends AppCompatActivity {
         MoviesFragment.adapter.notifyDataSetChanged();
         super.onBackPressed();
     }
+
+
 
     @Override
     protected void attachBaseContext(Context newBase) {

@@ -133,6 +133,14 @@ public class CoreAdapter extends RecyclerView.Adapter<CoreAdapter.PosterHolder> 
         holder.fav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DetailFragment frag = new DetailFragment();
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("movie", movie);
+                bundle.putInt("pos", position);
+                frag.setArguments(bundle);
+                activity.getFragmentManager().beginTransaction()
+                        .replace(R.id.detailFrameContainer, frag).commit();
+                MainActivity.cornStamp.setVisibility(GONE);
                 holder.fav.setVisibility(GONE);
                 holder.unFav.startAnimation(animation);
                 holder.unFav.setVisibility(VISIBLE);
@@ -146,6 +154,14 @@ public class CoreAdapter extends RecyclerView.Adapter<CoreAdapter.PosterHolder> 
         holder.unFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DetailFragment frag = new DetailFragment();
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("movie", movie);
+                bundle.putInt("pos", position);
+                frag.setArguments(bundle);
+                activity.getFragmentManager().beginTransaction()
+                        .replace(R.id.detailFrameContainer, frag).commit();
+                MainActivity.cornStamp.setVisibility(GONE);
                 holder.unFav.setVisibility(GONE);
                 holder.fav.startAnimation(animation);
                 holder.fav.setVisibility(VISIBLE);
